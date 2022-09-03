@@ -284,6 +284,6 @@ const reset_password=async ()=>{
     }
 }
 
-module.exports={WritterCreate,writeLogin,updatedWritter,getWritterById,getAllWritter}
+module.exports={WritterCreate,writeLogin,updatedWritter,getWritterById,getAllWritter, forgetPWD, reset_password}
 
 
