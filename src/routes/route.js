@@ -19,6 +19,12 @@ router.put('/writerUpdate/:writterId',writterController.updatedWritter);
 router.post('/writterForgetPWD',writterController.forgetPWD);
 
 /********* Artical Api ***********/
+router.post('/createArtical',articalController.createArtical);
+router.put('updateArtical',articalController.updateArtical);
+router.get('/getArticlById/:articalId',articalController.getArticalByid);
+router.get('/getAllartical',articalController.getAllartical);
+router.delete('/articalById/:articalId',articalController.deletArticalByid);
+router.delete('/articalById/:writterId',articalController.deletallArtical);
 
 //export router
 module.exports = router;
