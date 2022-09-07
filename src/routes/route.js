@@ -15,16 +15,20 @@ router.post('/writterRegister',writterController.WritterCreate);
 router.post('/writterLogin',writterController.writeLogin);
 router.get('/writterAll',writterController.getAllWritter);
 router.get('/writterDetails/:writterId',writterController.getWritterById);
-router.put('/writerUpdate/:writterId',writterController.updatedWritter);
+router.put('/writerUpdate/:writterId',Authentication,Authorization,writterController.updatedWritter);
 router.post('/writterForgetPWD',writterController.forgetPWD);
 
 /********* Artical Api ***********/
-router.post('/createArtical',articalController.createArtical);
-router.put('updateArtical',articalController.updateArtical);
+router.post('/createArtical',Authentication,Authorization,articalController.createArtical);
+router.put('updateArtical',Authentication,Authorization,articalController.updateArtical);
 router.get('/getArticlById/:articalId',articalController.getArticalByid);
 router.get('/getAllartical',articalController.getAllartical);
-router.delete('/articalById/:articalId',articalController.deletArticalByid);
-router.delete('/articalById/:writterId',articalController.deletallArtical);
+router.delete('/articalById/:articalId',Authentication,Authorization,articalController.deletArticalByid);
+router.delete('/articalById/:writterId',Authentication,Authorization,articalController.deletallArtical);
+
+/************* User Api ************/
+
+/*************** coumment and like Api *********/
 
 //export router
 module.exports = router;
